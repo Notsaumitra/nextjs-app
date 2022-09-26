@@ -1,9 +1,15 @@
 import React from "react";
+import Image from "next/image";
 
 const Product = ({ name, image, price, size, _id }) => {
   return (
     <div>
-      <img src={image} alt="sm-pizza" />
+      <Image
+        src={`/images/pizza${image}.png`}
+        alt="sm-pizza"
+        width="270px"
+        height="270px"
+      />
       <div className="text-center">
         <h2 className="text-lg font-bold py-2">{name}</h2>
         <span className="bg-gray-200 py-1 rounded-full px-4">{size}</span>

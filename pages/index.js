@@ -1,6 +1,7 @@
 import Main from "../components/Main";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
+import Head from "next/head";
 
 const DynamicProducts = dynamic(() => import("../components/products"), {
   suspense: true,
@@ -8,6 +9,13 @@ const DynamicProducts = dynamic(() => import("../components/products"), {
 const Home = (props) => {
   return (
     <>
+      <Head>
+        <title>Order Pizza</title>
+        <meta
+          name="description"
+          content="initial-scale=1.0, width=device-width"
+        />
+      </Head>
       <Main />
       <Suspense fallback={`Loading...`}>
         <DynamicProducts props={props.data} />

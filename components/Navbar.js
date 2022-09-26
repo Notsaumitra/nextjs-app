@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const cartStyle = {
@@ -11,7 +12,12 @@ const Navbar = () => {
       <nav className="container-full mx-auto flex justify-between py-4 shadow-lg">
         <Link href="/">
           <a>
-            <img style={{ height: "45px" }} src="images/logo.png" alt="logo" />
+            <Image
+              width="75px"
+              height="45px"
+              src="/images/logo.png"
+              alt="logo"
+            />
           </a>
         </Link>
 
